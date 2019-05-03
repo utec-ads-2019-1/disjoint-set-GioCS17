@@ -23,11 +23,11 @@ int main(){
 	ds.unionset(3,12,crit);
 	ds.unionset(3,13,crit);
 	ds.unionset(14,15,crit);
-	ds.unionset(16,0,crit);
+	ds.unionset(16,1,crit);
 	ds.unionset(14,16,crit);
 	ds.unionset(1,3,crit);
 	ds.unionset(1,14,crit);
-	for(int i=0;i<17;i++)
+	for(int i=1;i<17;i++)
 		ds.print(i);
 
 	return 0;
