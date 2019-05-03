@@ -11,11 +11,10 @@ struct Node{
 };
 class DisjointSet{
 private:
-		//int size;
-		//bool states[size]={0};
 		unordered_map<int,Node*> dict;
 		unordered_map<int,bool> states;
 public:
+	DisjointSet(){}
 	void unionset(int elem1,int elem2,int criterio){
 		Node *n1,*n2;
 		if(!states[elem1]){
@@ -74,6 +73,11 @@ public:
 		Node*n=dict[num];
 		while(n->parent!=n) n=n->parent;
 		cout<<"Elemento "<<num<<" esta en "<<(n->data)<<endl;
+	}
+	~DisjointSet(){
+		for(auto t:dict){
+			delete t.second;
+		}
 	}
 };
 
